@@ -14,6 +14,7 @@ public class Coffee extends MenuItem {
     Size size;
     Money basePrice;
     public Coffee(String name, Size size, Money basePrice){
+        super(name, basePrice);
         this.name = name;
         this.basePrice = basePrice;
         this.size = size;
@@ -26,10 +27,12 @@ public class Coffee extends MenuItem {
 
     @Override
     public Money getPrice() {
+        return basePrice;
     }
 
     @Override
     public String getReceiptItem() {
+        return name + "    " + basePrice.toString();
     }
     
 }

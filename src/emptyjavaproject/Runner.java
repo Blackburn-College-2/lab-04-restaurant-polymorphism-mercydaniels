@@ -7,7 +7,7 @@ package emptyjavaproject;
 
 /**
  *
- * @author paul.kline
+ * @author mercy.daniels
  */
 public class Runner {
 
