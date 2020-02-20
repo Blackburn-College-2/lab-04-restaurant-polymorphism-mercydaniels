@@ -19,10 +19,17 @@ public class FancyCoffee extends Coffee {
         super(name, size, basePrice);
         
     }
-
+/**
+ * Adds syrups to internal receipt
+ * @param orderable the syrup to be added
+ */
     public void add(Orderable orderable) {
         fancyCoffeeReceipt.add(orderable);
     }
+ /**
+  * makes the reciept a string
+  * @return syrupReceipt as String
+  */
       public String receiptAsString() {
          String syrupReceipt = fancyCoffeeReceipt.prepare();
           return syrupReceipt;

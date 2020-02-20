@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package lab04_mercydaniels;
 
 import edu.blackburn.cs.cs212.restaurantbase.Money;
@@ -21,12 +17,18 @@ public class Syrup implements Orderable {
 
         this.flavor = flavor;
     }
-
+/**
+ * overrides getPrice to return the price of the syrup
+ * @return price as type Money
+ */
     @Override
     public Money getPrice() {
         return this.price;
     }
-
+/**
+ * overrides getReceiptItem to return the reciept item as a string
+ * @return receiptSyrup as String
+ */
     @Override
     public String getReceiptItem() {
         String receiptSyrup = flavor + "   " + price.getAmountString();

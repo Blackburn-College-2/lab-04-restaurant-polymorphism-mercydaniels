@@ -22,16 +22,29 @@ public class Sandwich implements Orderable {
     public Sandwich(Money basePrice) {
         this.basePrice = basePrice;
     }
-
+/**
+ * Overrides getprice to return the price of the sandwich
+ * @return basePrice as type money
+ */
     @Override
     public Money getPrice() {
         return basePrice;
     }
-
+/**
+ * Overrides getreceiptitem to get the receipt item for the sandwich
+ * @return  sandwichReceipt as String
+ */
     @Override
     public String getReceiptItem() {
-        String sandwichReceipt = null;
+        String sandwichReceipt = contents.toString();
         return sandwichReceipt;
+    }
+    /**
+     * adds an orderable to the arraylist that consists of the ingredients of the sandwich
+     * @param orderable topping or meat to be added
+     */
+    public void add(Orderable orderable){
+        contents.add(orderable);
     }
 
 }

@@ -15,9 +15,9 @@ import edu.blackburn.cs.cs212.restaurantbase.Orderable;
 public class Topping implements Orderable {
 
     private String type;
-    private Money price;
+    private Money price = new Money(5000.0);
 
-    public Topping(String type, Money price) {
+    public Topping(String type) {
         this.type = type;
         this.price = price;
     }
