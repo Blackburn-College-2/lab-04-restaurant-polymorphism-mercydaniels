@@ -7,21 +7,31 @@ package lab04_mercydaniels;
 
 import edu.blackburn.cs.cs212.restaurantbase.Money;
 import edu.blackburn.cs.cs212.restaurantbase.Orderable;
+import java.util.ArrayList;
 
 /**
  *
  * @author mercy.daniels
  */
-public class Sandwich implements Orderable{
+public class Sandwich implements Orderable {
+
+    private Money basePrice;
+
+    private ArrayList contents = new ArrayList();
+
+    public Sandwich(Money basePrice) {
+        this.basePrice = basePrice;
+    }
 
     @Override
     public Money getPrice() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return basePrice;
     }
 
     @Override
     public String getReceiptItem() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String sandwichReceipt = null;
+        return sandwichReceipt;
     }
-    
+
 }

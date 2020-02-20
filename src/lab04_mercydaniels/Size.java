@@ -14,20 +14,24 @@ import edu.blackburn.cs.cs212.restaurantbase.*;
 public class Size extends Measurement {
 
     private String name;
-    
-    public Size(String name){
+
+    public Size(String name) {
         this.name = name;
     }
+
     /**
      * gets the name of the size to differentiate between coffee items
+     *
      * @return name as String
      */
-    public String getName(){
+    public String getName() {
         return this.name;
     }
+
     /**
      * overrides toString to return the name of the size
-     * @return 
+     *
+     * @return
      */
     @Override
     public String toString() {

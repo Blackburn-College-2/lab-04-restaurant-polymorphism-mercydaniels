@@ -1,4 +1,3 @@
-
 package lab04_mercydaniels;
 
 import edu.blackburn.cs.cs212.restaurantbase.*;
@@ -14,22 +13,24 @@ public class Runner {
      */
     public static void main(String[] args) {
         Size large = new Size("Large");
-        Money price =  new Money(500.00);
-        Coffee inAMug = new Coffee("In a Mug", large, price);
-        Coffee inABowl = new Coffee("In a Bowl", large, price);
-        Coffee onAPlate = new Coffee ("On a Plate", large, price);
-        Coffee inYourHands = new Coffee("In your Hands", large, price);
-        Coffee inAGlass = new Coffee("In a Glass", large, price);
-        Receipt coffeeReceipt = new Receipt();
+        Money price = new Money(1337.00);
+        FancyCoffee poured = 
+               new FancyCoffee("Poured Directly Into Your Mouth", large, price);
+        Syrup mayo = new Syrup("Warm Mayo");
+        Syrup sprite = new Syrup ("It's Just Sprite!");
+        Syrup shampoo = new Syrup ("Shampoo");
         
-        coffeeReceipt.add(inAMug);
-        coffeeReceipt.add(inABowl);
-        coffeeReceipt.add(onAPlate);
-        coffeeReceipt.add(inYourHands);
-        coffeeReceipt.add(inAGlass);
+        poured.add(mayo);
+        poured.add(sprite);
+        poured.add(shampoo);
+         
+        Receipt fancyCoffeeReceipt = new Receipt();
+        fancyCoffeeReceipt.add(poured);
         
-         String coffeeReceiptPrint = coffeeReceipt.prepare();
-         System.out.println(coffeeReceiptPrint);
+        
+        System.out.println(fancyCoffeeReceipt.prepare());
+        System.out.println(poured.receiptAsString());
+        System.out.println(fancyCoffeeReceipt.getTotalString());
     }
-    
+
 }

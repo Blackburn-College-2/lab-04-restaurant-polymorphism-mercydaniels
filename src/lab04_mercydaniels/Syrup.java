@@ -12,12 +12,13 @@ import edu.blackburn.cs.cs212.restaurantbase.Orderable;
  *
  * @author mercy.daniels
  */
-public class Syrup implements Orderable{
-private Money price = new Money(25.0);
-private String flavor;
+public class Syrup implements Orderable {
+
+    private Money price = new Money(25.0);
+    private String flavor;
 
     public Syrup(String flavor) {
-        
+
         this.flavor = flavor;
     }
 
@@ -32,4 +33,6 @@ private String flavor;
         return receiptSyrup;
     }
     
+    
+  
 }

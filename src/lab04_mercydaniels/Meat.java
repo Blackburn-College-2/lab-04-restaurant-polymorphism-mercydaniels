@@ -12,15 +12,16 @@ import edu.blackburn.cs.cs212.restaurantbase.Orderable;
  *
  * @author mercy.daniels
  */
-public class Meat implements Orderable{
- private Money price;
- private String name;
+public class Meat implements Orderable {
+
+    private Money price;
+    private String name;
 
     public Meat(Money price, String name) {
         this.price = price;
         this.name = name;
     }
- 
+
     @Override
     public Money getPrice() {
         return price;
@@ -31,5 +32,5 @@ public class Meat implements Orderable{
         String meatReceipt = name + "   " + price.getAmountString();
         return meatReceipt;
     }
-    
+
 }

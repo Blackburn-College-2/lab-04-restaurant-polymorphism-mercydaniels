@@ -14,13 +14,14 @@ import edu.blackburn.cs.cs212.restaurantbase.Orderable;
  */
 public class Topping implements Orderable {
 
-   private String type;
-   private Money price;
+    private String type;
+    private Money price;
 
     public Topping(String type, Money price) {
         this.type = type;
         this.price = price;
     }
+
     @Override
     public Money getPrice() {
         return price;
@@ -28,8 +29,8 @@ public class Topping implements Orderable {
 
     @Override
     public String getReceiptItem() {
-        String toppingReceipt = type + "    "+ price.getAmountString();
+        String toppingReceipt = type + "    " + price.getAmountString();
         return toppingReceipt;
     }
-    
+
 }
