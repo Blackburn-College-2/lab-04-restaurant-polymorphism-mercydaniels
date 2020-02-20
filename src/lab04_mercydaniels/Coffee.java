@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package emptyjavaproject;
+package lab04_mercydaniels;
 import edu.blackburn.cs.cs212.restaurantbase.*;
 /**
  *
@@ -19,17 +19,27 @@ public class Coffee extends MenuItem {
         this.basePrice = basePrice;
         this.size = size;
     }
+    /**
+     * Overrides toString to return the name, size, and price of the coffee.
+     * @return coffeeInfo as a String
+     */
     @Override
     public String toString() {
        String coffeeInfo = name + size.toString() + basePrice.toString();
        return coffeeInfo;
     }
-
+/**
+ * Overrides getPrice to return the price of the coffee item
+ * @return basePrice as money
+ */
     @Override
     public Money getPrice() {
         return basePrice;
     }
-
+/**
+ * Override getReceiptItem to return the name and the price as a Receipt item
+ * @return name and price as String
+ */
     @Override
     public String getReceiptItem() {
         return name + "    " + basePrice.toString();
